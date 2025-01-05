@@ -27,7 +27,6 @@ const UserProvider = ({ children }) => {
                 const data = await response.json();
                 console.log(data);
 
-                // Assuming the response contains a 'bookings' array
                 if (data.bookings && Array.isArray(data.bookings)) {
                     setUserBookings(data.bookings);
                 }

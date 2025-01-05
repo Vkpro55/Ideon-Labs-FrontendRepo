@@ -9,12 +9,10 @@ const BookAppointmentPage = () => {
     const [selectedDate, setSelectedDate] = useState('');
     const [errorMessage, setErrorMessage] = useState('');
 
-    // Handle date change
     const handleDateChange = (event) => {
         setSelectedDate(event.target.value);
     };
 
-    // Fetch available slots
     const handleFetchSlots = async () => {
         if (!selectedDate) {
             alert('Please select a date.');
