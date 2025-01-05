@@ -85,4 +85,44 @@ Key Features:
 - Simple Integration: Easy to integrate with front-end frameworks (like React) and backend services (via Firebase Cloud Functions).
 - Automatic Indexing: Manages and optimizes indexes for better query performance without manual intervention.
 
+6. **Proposed database structure**:
+```bash
+appointments
+         └──date(document)
+                        └──slots(subcollection)
+                                           └──9:30AM to 10:00AM(document)
+                                              {
+                                                 booked: true
+                                                 userId: "Anil"
+                                              }
+```
+```bash
+users
+ └── Anil (document)
+      └── bookings (sub-collection)
+           └── 2025-01-08_02:00 PM - 02:30 PM (document)
+                {
+                    "date": "2025-01-08",
+                    "slot": "02:00 PM - 02:30 PM",
+                    "bookedAt": "Sat Jan 04 2025",
+                    "userId": "Anil"
+                }
+           └── 2025-01-08_03:00 PM - 03:30 PM (document)
+                {
+                    "date": "2025-01-08",
+                    "slot": "03:00 PM - 03:30 PM",
+                    "bookedAt": "Sat Jan 04 2025",
+                    "userId": "Anil"
+                }
+
+ └── Ravi (document)
+      └── bookings (sub-collection)
+           └── 2025-01-09_01:00 PM - 01:30 PM (document)
+                {
+                    "date": "2025-01-09",
+                    "slot": "01:00 PM - 01:30 PM",
+                    "bookedAt": "Sat Jan 04 2025",
+                    "userId": "Ravi"
+                }
+```
    
