@@ -85,7 +85,8 @@ Key Features:
 - Simple Integration: Easy to integrate with front-end frameworks (like React) and backend services (via Firebase Cloud Functions).
 - Automatic Indexing: Manages and optimizes indexes for better query performance without manual intervention.
 
-6. **Proposed database structure**:
+7. **Proposed database structure**:
+The decision to structure the appointments data with a subcollection for slots, rather than storing slots as an array directly within the appointment document, is driven by the need for efficient querying and scalability. Firebase imposes a limit of 1MB per document, and storing slots as individual documents allows for more efficient retrieval and modification of specific slots without fetching the entire data. This also helps avoid document size limitations, enables better indexing, and provides flexibility in handling changes, such as bookings, through Firebase's optimistic concurrency control mechanism, ensuring data consistency and improving performance.
 ```bash
 appointments
          └──date(document)
