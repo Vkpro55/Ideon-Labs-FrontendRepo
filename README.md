@@ -10,93 +10,13 @@ Key Features:
 - Book a slot with user-specific information.
 - Clear feedback for booked or unavailable slots.
 
-## Overview
-This project is a full-stack application with a **React + TailWind CSS** Frontend and a **Node.js with Supabse and Prisma ORM** Backend. The backend handles the full Crud opeartion for Students seamlessly.
-
 
 ## How to Run the Project Locally
-
-### Prerequisites
-- Node.js 
-- Supabase with Prisma ORM
-
-### Backend (Node.js + Supabse + Prisma ORM)
-
-1. **Backend Repo**:
-   ```bash
-   https://github.com/Vkpro55/Imagify_Backend
-   ```
-   Backend Deployed Url: 
-   ```bash
-    https://instrictive-backend.onrender.com
-   ```
-
-2. **Clone the repository**:
-   ```bash
-   git clone https://github.com/Vkpro55/Instrictive_Backend.git
-   cd Instrictive_Backend
-   ```
-3. **Install Packages**:
-   ```bash
-   npm install
-   ```
-3. **Run the backend server**:
-   ```bash
-   npm start
-   ```
-4. **Backend API Endpoints**:
-   ```bash
-   curl -X GET https://instrictive-backend.onrender.com/api/students
-    
-   ```
-   ```bash
-   curl -X PUT https://instrictive-backend.onrender.com/api/students/3 \
-     -H "Content-Type: application/json" \
-     -d '{
-           "name": "Updated",
-           "cohort": "AY25",
-           "dateJoined": "2024-12-24T07:40:34.849Z",
-           "lastLogin": "2024-12-24T07:40:34.849Z",
-           "status": true,
-           "courses": [
-             {
-                 "id": 1,
-                 "name": "CBSE 9 Math"
-             }
-           ]
-         }'
-
-   ```
-
-   ```bash
-   curl -X DELETE http://localhost:3000/api/students/103
-
-   ```
-   ```bash
-   curl -X POST https://instrictive-backend.onrender.com/api/students \
-     -H "Content-Type: application/json" \
-     -d '{
-           "name": "New Student",
-           "cohort": "AY25",
-           "dateJoined": "2024-12-24T07:40:34.849Z",
-           "lastLogin": "2024-12-24T07:40:34.849Z",
-           "status": true,
-           "courses": [
-             {
-                 "id": 1,
-                 "name": "CBSE 9 Math"
-             }
-           ]
-         }'
-
-
-   ```
-
-### Frontend (React)
+### Frontend (React + Context API + Pure CSS)
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/Vkpro55/Insrictive_frontend.git
-   cd Insrictive_frontend
+   git clone https://github.com/Vkpro55/Ideon-Labs-FrontendRepo.git
+   cd Ideon-Labs-FrontendRepo
    ```
 
 2. **Install Dependencies**:
@@ -109,7 +29,56 @@ This project is a full-stack application with a **React + TailWind CSS** Fronten
    npm run dev
    ```
 
-![Screenshot (482)](https://github.com/user-attachments/assets/bc6806ae-4d85-4a28-91c4-071a9eec0e95)
+
+### Backend (Firebase Cloud Functions + Firebase Database)
+
+1. **Backend Repo**:
+   ```bash
+   git clone https://github.com/Vkpro55/Ideon-Labs-BackendRepo.git
+   cd Ideon-Labs-BackendRepo
+   ```
+   
+3. **Install Packages**:
+   ```bash
+   npm install
+   ```
+3. **Run the backend server**:
+   ```bash
+   npm start
+   ```
+4.  **Backend Deployed Url**:
+   ```bash
+    https://ideon-labs-backendrepo.onrender.com
+   ```
+4. **Backend API Endpoints**:
+   1. Get Single User Bookings
+   ```bash
+   curl -X GET "https://ideon-labs-backendrepo.onrender.com/userBookings?userId=Vinod%20Kumar"
+   ```
+   2. GET Available Slots for a Date
+   ```bash
+   curl -X GET "https://ideon-labs-backendrepo.onrender.com/availableSlots?date=2025-01-08"
+   ```
+   3. POST Book a Slot
+   ```bash
+   curl -X POST "https://ideon-labs-backendrepo.onrender.com/bookSlot" \
+   -H "Content-Type: application/json" \
+   -d '{
+   "date": "2025-01-08",
+   "slot": "10:30 AM - 11:00 AM",
+   "userId": "Vinod Kumar"
+   }'
+   ```
+   4. POST Cancel a Slot
+   ```bash
+   curl -X POST "https://ideon-labs-backendrepo.onrender.com/cancelSlot" \
+   -H "Content-Type: application/json" \
+   -d '{
+   "date": "2025-01-08",
+   "slot": "4:30 PM - 05:00 PM",
+   "userId": "Anil"
+   }'
+   ```
 
 
    
