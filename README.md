@@ -50,7 +50,7 @@ Key Features:
    ```bash
     https://ideon-labs-backendrepo.onrender.com
    ```
-4. **Backend API Endpoints**:
+5. **Backend API Endpoints**:
    1. Get Single User Bookings
    ```bash
    curl -X GET "https://ideon-labs-backendrepo.onrender.com/userBookings?userId=Vinod%20Kumar"
@@ -80,5 +80,11 @@ Key Features:
    }'
    ```
 
+
+5. ** Why Firebase over other Databse**:
+- Real-time Data Sync: Automatically syncs data across clients, enabling real-time updates without complex setup.
+- Optimistic Concurrency Control: Avoids locking issues and handles race conditions by re-trying transactions if data changes.
+- Simple Integration: Easy to integrate with front-end frameworks (like React) and backend services (via Firebase Cloud Functions).
+- Automatic Indexing: Manages and optimizes indexes for better query performance without manual intervention.
 
    
