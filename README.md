@@ -1,13 +1,14 @@
 # Appointment Booking App: Appointly: React + Firebase
 This is a simple appointment booking application that allows users to book 30-minute time slots from Monday to Friday, 9:00 AM to 5:00 PM IST. Users can select a date within a configurable booking window (default: 5 days) and book available slots. The app features:
 
-Frontend: Built with React, providing an intuitive interface to check slot availability and book appointments.
-Backend: Powered by Firebase Cloud Functions, handling API requests to interact with Firestore.
-Database: Cloud Firestore stores and manages booking data efficiently, preventing duplicate bookings and ensuring real-time updates.
+- Frontend: Built with React, providing an intuitive interface to check slot availability and book appointments.
+- Backend: Powered by Firebase Cloud Functions, handling API requests to interact with Firestore.
+- Database: Cloud Firestore stores and manages booking data efficiently, preventing duplicate bookings and ensuring real-time updates.
+
 Key Features:
-Fetch available slots for a selected date.
-Book a slot with user-specific information.
-Clear feedback for booked or unavailable slots.
+- Fetch available slots for a selected date.
+- Book a slot with user-specific information.
+- Clear feedback for booked or unavailable slots.
 
 ## Overview
 This project is a full-stack application with a **React + TailWind CSS** Frontend and a **Node.js with Supabse and Prisma ORM** Backend. The backend handles the full Crud opeartion for Students seamlessly.
