@@ -79,7 +79,6 @@ Key Features:
    "userId": "Anil"
    }'
    ```
-
 6. **Why Firebase over other Databse**:
 - Real-time Data Sync: Automatically syncs data across clients, enabling real-time updates without complex setup.
 - Optimistic Concurrency Control: Avoids locking issues and handles race conditions by re-trying transactions if data changes.
