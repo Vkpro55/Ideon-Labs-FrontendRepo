@@ -1,0 +1,442 @@
+/* === Google Fonts === */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Jost:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* THEME */
+:root {
+    --bg-color: #FFFFFF;
+    --main-heading-color: #000000;
+    --secondary-heading-color: #FFFFFF;
+    --span-color: #39DB4A;
+    --button-bg-color: #ff5300;
+    --button-hover-color:#1f0045;
+    --font-color: #4A4A4A;
+    --para-items-anchor-color: #272727;
+    --btn-box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    --main-color: #5041BC;
+}
+
+/* === Globally Changes in default CSS === */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%; /* ===  1rem= 10px === */
+}
+
+h1,
+h2,
+h3, h4{
+    font-family: "Poppins", sans-serif;
+}
+
+p,
+li,
+a, div {
+    font-family: "Urbanist", sans-serif;
+    font-size: 1.8rem;
+    font-weight: 400;
+    letter-spacing: 0.1rem;
+    color: var(--para-items-anchor-color);
+    line-height: 1.5;
+}
+
+body{
+    background-color: var(--bg-color);
+}
+
+/* === MAIN LAYOUT === */
+.container {
+    max-width: 120rem;
+    height: 100vh;
+    margin: 0 auto;
+}
+
+.grid {
+    display: grid;
+}
+
+.grid-two-columns {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+
+.btn{
+    width: 90%;
+    padding: 1.2rem;
+    font-size: 2rem;
+    background-color: var(--bg-color);
+    border-radius: 8px;
+}
+
+/* === START HOME PAGE === */
+
+.section-home-page{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    & .home-page-div{
+        max-height: 40rem;
+        box-shadow: var(--btn-box-shadow);
+        padding: 2rem;
+        gap: 5rem;
+
+        display: flex;
+        justify-content:center;
+        align-items: center;
+
+        & .home-page-content{
+            max-width: 55%;
+        
+            &  h1{
+                font-size: 4.5rem;
+    
+                & span{
+                    font-style: italic;
+                    color: var(--span-color);
+                }
+    
+                & p{
+                    text-align: start;
+                }
+           }
+        }
+    }
+}
+
+.home-page-form{
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    & form{
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        width: 70%;
+
+        & input {
+            width: 100%;
+            padding: 1.5rem;
+            font-size: 1.8rem;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            outline: none;
+            transition: all 0.3s ease;
+
+            &:focus {
+                border-color: var(--button-bg-color);
+                box-shadow: 0 0 10px rgba(57, 219, 74, 0.3);
+            }
+        }
+
+        & button{
+            width: 100%;
+            padding: 1.5rem;
+            font-size: 2rem;
+            background-color: var(--button-bg-color);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+
+            &:hover {
+                background-color: var(--button-hover-color);
+            }
+
+            &:active {
+                transform: translateY(2px);
+            }
+        }
+    }
+}
+
+/* === END HOME PAGE === */
+
+
+
+/* === START BOOKING PAGE=== */
+
+.section-booking-page {
+    background-color: var(--main-color);
+    height: 100vh;
+
+    .container {
+        margin: 0;
+        max-width: 100vw;
+        display: grid;
+        grid-template-columns: repeat(10, 1fr);
+        height: 100%;
+
+        & .sidebar-div {
+            grid-column: span 2;
+
+            display: grid;
+            grid-template-rows: repeat(10, 1fr);
+            grid-template-columns: 1fr;
+
+            height: 100vh;
+
+            & .sidebar-logo {
+                grid-row: span 1;
+                text-align: center;
+                padding: 2rem;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+
+                & h3{
+                    font-size: 1.5rem;
+                    color: var(--secondary-heading-color);
+                }
+                & img {
+                    width: 7rem;
+                    transition: all 0.5s ease-in-out;
+
+                    &:hover{
+                        transform: scale(1.1);
+                        box-shadow: var(--btn-box-shadow);
+                    }
+                }
+            }
+
+            & .sidebar-content {
+                grid-row: span 7;
+                padding: 1rem;
+
+                display: flex;
+                flex-direction: column;
+                gap: 2rem;
+
+                & h4{
+                    font-size: 1.5rem;
+                    color: var(--secondary-heading-color);
+                }
+
+                & .sidebar-btn{
+                    transition: all 1s linear;
+
+                    &:hover{
+                        color: var(--secondary-heading-color);
+                        background-color: var(--button-hover-color);
+                    }
+                }
+            }
+
+            & .sidebar-profile {
+                grid-row: span 2;
+                padding: 1rem;
+                border-top: 1px solid rgba(255, 255, 255, 0.2);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                & img{
+                    width: 7rem;
+                }
+
+                & p{
+                    font-size: 1rem;
+                    font-weight: 500;
+                    color: var(--secondary-heading-color);
+                }
+            }
+        }
+
+        & main {
+            grid-column: span 8;
+            
+            background-color: var(--bg-color);
+            padding: 2rem 0rem;
+            overflow-y: auto; /* === It can scroll content=== */
+            height: 100%;
+
+           & .section-main{
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+
+            & .main-heading{
+                padding-bottom:1rem;
+                text-align: center;
+                box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px;
+
+                & h2{
+                    font-size: 3rem;
+                    color: var(--main-heading-color);
+                }
+            }
+
+
+            /* & .main-content{
+                padding: 2rem;
+
+                & .grid-table{
+                    display: grid;
+                    grid-template-columns: repeat(5, 1fr);
+                    gap: 1rem;
+
+
+                    & .grid-header, .grid-row {
+                        padding: 1rem;
+                        text-align: center;
+                    }
+
+                    & .grid-header {
+                        font-size: 1.6rem;
+                        font-weight: bold;
+                        color: var(--main-heading-color);
+                    }
+
+                    & .grid-row {
+                        border-top: 1px solid #ddd;
+
+                        & .action-btn {
+                            margin: 0 4rem;
+                            width: 12rem;
+                        }
+
+                        & .btn {
+                            padding: 0.5rem 1rem;
+                            cursor: pointer;
+                            background-color: var(--main-color);
+                            color: white;
+                            border: none;
+                            border-radius: 0.5rem;
+                        }
+                    }
+                }
+            } */
+
+        .main-content {
+            padding: 2rem;
+        }
+    
+        .grid-table {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            /* 5 equal columns */
+            gap: 1rem;
+        }
+    
+        .grid-header,
+        .grid-cell {
+            padding: 1rem;
+            text-align: center;
+        }
+    
+        .grid-header {
+            font-size: 1.6rem;
+            font-weight: bold;
+            color: var(--main-heading-color);
+            background-color: #f4f4f4;
+            /* Light background for headers */
+        }
+    
+        .grid-row {
+            display: contents;
+            /* Ensures the grid cells align with the header */
+        }
+    
+        .grid-cell {
+            border-top: 1px solid #ddd;
+        }
+    
+        .grid-cell button {
+            padding: 0.5rem 1rem;
+            cursor: pointer;
+            background-color: var(--main-color);
+            color: white;
+            border: none;
+            border-radius: 0.5rem;
+        }
+    
+        .grid-cell .action-btn {
+            margin: 0 1rem;
+            width: 15rem;
+            /* Adjust button width */
+        }
+           }
+
+        }
+    }
+}
+
+
+/* === END BOOKING PAGE === */
+
+
+/* === START BOOKING MAIN CONTENT ===*/
+
+.section-bookAppointment{
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    .bookAppointment-input{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 1rem;
+
+        box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+        & input {
+                width: 30%;
+                padding: 1rem;
+                font-size: 1.8rem;
+                border: 1px solid #ccc;
+                border-radius: 8px;
+                outline: none;
+                transition: all 0.3s ease;
+        
+                &:focus {
+                    border-color: var(--button-bg-color);
+                    box-shadow: 0 0 10px rgba(57, 219, 74, 0.3);
+                }
+            }
+        
+            & button {
+                /* width: 30%; */
+                padding: 1rem;
+                font-size: 2rem;
+                background-color: var(--button-bg-color);
+                color: white;
+                border: none;
+                border-radius: 8px;
+                cursor: pointer;
+                transition: background-color 0.3s ease;
+        
+                &:hover {
+                    background-color: var(--button-hover-color);
+                }
+        
+                &:active {
+                    transform: translateY(2px);
+                }
+            }
+    }
+
+
+    & .bookAppointment-data{
+        margin-top: 5rem;
+
+        & .new-grid-table{
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1rem;
+        }
+
+        & .no-data{
+           text-align: center;
+        }
+    }
+
+    
+}
+/* === END BOOKING MAIN CONTENT=== */
